@@ -17,6 +17,9 @@ pytest_brain () {
 	# Activate codebase virtual environment
 	source $OPENAG_BRAIN_ROOT/venv/bin/activate
 
+	# Get current working directory
+	cwd=$(pwd)
+
 	# Move to brain root directory
 	pushd $OPENAG_BRAIN_ROOT
 
