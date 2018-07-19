@@ -6,7 +6,10 @@ sudo connmanctl
 services
 agent on
 config ethernet_38d2697b8fda_cable --autoconnect yes
-config ethernet_38d2697b8fda_cable  --ipv4 manual 172.17.0.21 255.255.0.0 172.17.0.1  --nameservers 172.17.0.1 18.71.0.151 18.70.0.160 18.72.0.3
+config ethernet_38d2697b8fda_cable  --ipv4 manual 172.17.X.X 255.255.0.0 172.17.0.1  --nameservers 172.17.0.1 18.71.0.151 18.70.0.160 18.72.0.3
+
+
+
 
 
 # Slighly more info
