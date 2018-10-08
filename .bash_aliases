@@ -1,7 +1,7 @@
 alias subl=/opt/sublime_text/sublime_text 
 alias sls='screen ls'
 alias mp='mypy --python-version 3.6 --follow-imports skip --ignore-missing-imports --strict --allow-untyped-decorators'
-alias pt='pytest_cov'; pytest_cov() { python3 -m pytest $1 --cov=tests; }
+alias pt='pytest_cov'; pytest_cov() { python3 -m pytest $1 --cov=$1 --cov-report term-missing; }
 alias ptb='pytest_brain' 
 
 pytest_brain () { 
@@ -29,4 +29,12 @@ pytest_brain () {
 	# Return to current working directory (and suppress output)
 	popd > /dev/null
 
+}
+
+pyclean () {
+	echo "Cleaning __pycache__ files..."
+    find . -type d -name __pycache__ -exec rm -r {} \+
+    echo "Cleaning .mypy_cache files..."
+    find . -type d -name .mypy_cache -exec rm -r {} \+
+    echo "...done"
 }
