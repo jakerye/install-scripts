@@ -36,5 +36,8 @@ pyclean () {
     find . -type d -name __pycache__ -exec rm -r {} \+
     echo "Cleaning .mypy_cache files..."
     find . -type d -name .mypy_cache -exec rm -r {} \+
+    echo "Cleaning .coverage files..."
+    find . -name ".coverage" -type f -delete
+    # find . -type d -name .coverage -exec rm {} \+
     echo "...done"
 }
